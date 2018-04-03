@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>lalalalalalla</title>
+	<script src="jquery.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+	<script type="text/javascript">
+		function checkName () {
+			var user = $(username)[0].value;
+			if (!user) {
+				console.log('不能为空');
+				return false;
+			}
+			return true;
+		}
+		function checkPass () {
+			var pass = $(pass);
+			console.log(pass);
+			if (!pass) {
+				console.log('不能为空');
+				return false;
+			}
+			return true;
+		}
+		function RcheckName () {
+			var user = $(Rusername)[0].value;
+			if (!user) {
+				console.log('不能为空');
+				return false;
+			}
+			return true;
+		}
+		function RcheckPass () {
+			var pass = $(Rpass);
+			console.log(pass);
+			if (!pass) {
+				console.log('不能为空');
+				return false;
+			}
+			return true;
+		}
+		function checkLog () {
+			if (checkName()&&checkPass()) {
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
+		function checkR () {
+			if (RcheckName()&&RcheckPass()) {
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
+	</script>
+</head>
+<body>
+	<form method="./test.php" action="post" onsubmit="return checkLog()">
+		<input type="text" name="username" id="username">
+		<input type="password" name="pass" id="pass">
+		<input type="submit" name="login">
+	</form>
+	<form method="./test.php" action="post" onsubmit="return checkR()">
+		<input type="text" id="Rusername">
+		<input type="password" id="Rpass">
+		<input type="submit" name="rigister">
+	</form>
+</body>
+</html>

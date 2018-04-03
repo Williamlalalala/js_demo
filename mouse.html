@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script type="text/javascript">
+        // 说明：获取鼠标位置
+        // 整理：http://www.codebit.cn
+        // 来源：http://www.webreference.com
+        function mousePosition(ev) {   
+            if (ev.pageX || ev.pageY) {     
+                return {
+                    x: ev.pageX,
+                    y: ev.pageY
+                };   
+            }   
+            return {     
+                x: ev.clientX + document.body.scrollLeft - document.body.clientLeft,
+                     y: ev.clientY + document.body.scrollTop - document.body.clientTop   
+            };
+        }
+        window.onload = function() {
+            alert("lalala");
+            document.onmousemove = mouseMove;
+
+            function mouseMove(ev) { 
+                ev = ev || window.event;
+                document.getElementsByClassName(classNames: DOMString);
+
+                 
+                var mousePos = mousePosition(ev);   
+                document.getElementById('mouseXPosition').innerHTML = mousePos.x;   
+                document.getElementById('mouseYPosition').innerHTML = mousePos.y;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <p id="mouseYPosition"></p>
+    <object style="background-color: black;"></object>
+    <p id="mouseYPosition"></p>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<HTML>    
+<HEAD>    
+<TITLE>WMI Scripting HTML</TITLE>    
+</HEAD>    
+<BODY>    
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>   
+<script src="./ajax.js"></script>
+<script src="./jquery.js"></script>
+<script>   
+      document.write(returnCitySN["cip"]+','+returnCitySN["cname"]);
+      var ip = returnCitySN["cip"];
+      console.log(ip);
+      $.ajax({
+      	url: './test.java',
+      	type: 'get',
+      	dataType: 'json',
+      	data: {myip: ip},
+      })
+      .done(function() {
+      	console.log("success");
+      })
+      .fail(function() {
+      	console.log("error");
+      })
+      .always(function() {
+      	console.log("complete");
+      });
+      
+</script>  
+</BODY>    
+</HTML>   
