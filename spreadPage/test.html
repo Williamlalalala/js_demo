@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdn.bootcss.com/vue/2.5.15/vue.js"></script>
+    <script async src="./test.js"></script>
+    <script type="text/x-template" id="count-template">
+        <button v-on:click="count++">click me{{count}}times</button>
+    </script>
+</head>
+
+<body>
+    <div id="myapp">
+        <nav aria-label="Page navigation">
+            <ul class="pagination">
+                <li v-if="current>1">
+                    <a href="#" v-on:click="current--,pageClick()" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li v-if="current==1"><a class="banclick" v-on:click="current=1">1</a></li>
+                <li v-for="index in indexar">
+                    <a href="#" v-on:click="btClick(index)">{{index}}</a>
+                </li>
+                <li v-if="current!=all"><a v-on:click="current=all,pageClick()">{{all}}</a></li>
+                <li v-if="current!=all">
+                    <a href="#" v-on:click="current++,pageClick()" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</body>
+
+</html>
