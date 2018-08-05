@@ -1,0 +1,16 @@
+<html>
+
+<head>
+    <script src="https://cdn.bootcss.com/vue/2.5.15/vue.js"></script>
+    <script async src="./test.js"></script>
+</head>
+
+<body>
+    <div id="myapp">
+        <div v-for="stu">
+            <el-checkbox v-model="checked2" label="{{stu.StudentName}}" border></el-checkbox>
+        </div>
+        <button type="submit" v-on:click="sub"></button>
+</div>
+</body>
+</html>

@@ -1,0 +1,2 @@
+[0615/221746.463:WARNING:minidump_to_upload_parameters.cc(66)] duplicate annotation name metrics_client_id, discarding value 8c30e6a38b6843c88a3d5fe145f09469
+[0615/221746.579:ERROR:http_transport_win.cc(273)] WinHttpSendRequest: 无法解析服务器的名称或地址 (0x2ee7)

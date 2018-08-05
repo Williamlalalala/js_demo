@@ -19,12 +19,12 @@
                         <span aria-hidden="true">&laquo;</span>
                     </a>
                 </li>
-                <li v-if="current==1"><a class="banclick" v-on:click="current=1">1</a></li>
+                <li><a class="banclick" v-on:click="current=1">1</a></li>
                 <li v-for="index in indexar">
                     <a href="#" v-on:click="btClick(index)">{{index}}</a>
                 </li>
-                <li v-if="current!=all"><a v-on:click="current=all,pageClick()">{{all}}</a></li>
-                <li v-if="current!=all">
+                <li><a v-on:click="current=all,pageClick()">{{all}}</a></li>
+                <li v-if="current<all">
                     <a href="#" v-on:click="current++,pageClick()" aria-label="Next">
                         <span aria-hidden="true">&raquo;</span>
                     </a>
